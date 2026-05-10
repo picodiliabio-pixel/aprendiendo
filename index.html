@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brújula Emocional Escolar</title>
+    <meta
+      name="description"
+      content="Tamizaje orientativo de depresión y ansiedad para estudiantes de grado sexto a once."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="Inicio Brújula Emocional Escolar">
+          <span class="brand__mark">BE</span>
+          <span>Brújula Emocional</span>
+        </a>
+        <div class="topbar__links">
+          <a href="#tamizaje">Tamizaje</a>
+          <a href="#orientacion">Orientación</a>
+          <a href="#recursos">Ayuda</a>
+        </div>
+      </nav>
+
+      <section id="inicio" class="hero__content">
+        <div>
+          <p class="eyebrow">Para jóvenes de sexto a once</p>
+          <h1>Detecta señales tempranas de depresión y ansiedad con una guía segura y responsable.</h1>
+          <p class="hero__lead">
+            Esta página integra criterios de tamizaje usados en instrumentos reconocidos como PHQ-A/PHQ-9,
+            GAD-7, SCARED y observaciones escolares de funcionamiento. No entrega diagnósticos: ayuda a
+            decidir cuándo pedir apoyo profesional.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#tamizaje">Iniciar cuestionario</a>
+            <a class="button button--secondary" href="#recursos">Ver rutas de ayuda</a>
+          </div>
+        </div>
+        <aside class="hero__card" aria-label="Aviso importante">
+          <h2>Importante</h2>
+          <p>
+            Si una respuesta indica ideas de hacerse daño, el resultado mostrará una alerta de seguridad.
+            En ese caso no esperes: busca a un adulto de confianza, orientación escolar o emergencias.
+          </p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="notice" aria-label="Alcance de la herramienta">
+        <h2>Uso ético y límites</h2>
+        <p>
+          La herramienta es educativa y de tamizaje. Debe aplicarse con consentimiento informado, protección
+          de datos y acompañamiento de psicología/orientación escolar. Las respuestas se procesan solo en el
+          navegador y no se envían a ningún servidor.
+        </p>
+      </section>
+
+      <section id="tamizaje" class="assessment section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Cuestionario breve</p>
+          <h2>Responde pensando en las últimas 2 semanas</h2>
+          <p>
+            Marca la frecuencia que mejor describe cómo te has sentido. Al finalizar verás un nivel orientativo
+            y pasos recomendados para estudiante, familia y colegio.
+          </p>
+        </div>
+
+        <form id="screeningForm" class="screening-form">
+          <fieldset class="student-card">
+            <legend>Datos básicos no identificables</legend>
+            <label>
+              Grado
+              <select id="grade" name="grade" required>
+                <option value="">Selecciona</option>
+                <option>Sexto</option>
+                <option>Séptimo</option>
+                <option>Octavo</option>
+                <option>Noveno</option>
+                <option>Décimo</option>
+                <option>Once</option>
+              </select>
+            </label>
+            <label>
+              Edad
+              <input id="age" name="age" type="number" min="10" max="19" placeholder="Ej. 14" required />
+            </label>
+            <label>
+              ¿Quién acompaña este proceso?
+              <select id="support" name="support" required>
+                <option value="">Selecciona</option>
+                <option>Orientación escolar</option>
+                <option>Docente</option>
+                <option>Madre, padre o acudiente</option>
+                <option>Profesional de salud</option>
+                <option>Lo estoy explorando con un adulto de confianza</option>
+              </select>
+            </label>
+          </fieldset>
+
+          <div id="questions" class="questions" aria-live="polite"></div>
+
+          <div class="form-actions">
+            <button class="button button--primary" type="submit">Calcular orientación</button>
+            <button class="button button--ghost" type="reset">Limpiar respuestas</button>
+          </div>
+        </form>
+
+        <section id="results" class="results" aria-live="polite" hidden></section>
+      </section>
+
+      <section id="orientacion" class="section-shell info-grid">
+        <article>
+          <h2>Cómo interpretar los niveles</h2>
+          <ul class="checklist">
+            <li><strong>Bajo:</strong> mantener hábitos protectores y revisar cambios si aparecen señales nuevas.</li>
+            <li><strong>Leve:</strong> conversar con un adulto, observar por 2 semanas y fortalecer rutinas.</li>
+            <li><strong>Moderado:</strong> solicitar valoración de orientación escolar o profesional de salud mental.</li>
+            <li><strong>Alto:</strong> priorizar evaluación profesional pronta y un plan de seguridad.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Señales escolares y neuropsicológicas</h2>
+          <p>
+            Además del estado de ánimo, observa sueño, apetito, atención, memoria de trabajo, irritabilidad,
+            asistencia, rendimiento, aislamiento, consumo de sustancias, dolores frecuentes y cambios bruscos
+            de conducta. Un resultado alto debe contextualizarse con entrevista clínica.
+          </p>
+        </article>
+        <article>
+          <h2>Recomendaciones de aplicación</h2>
+          <p>
+            Aplica el cuestionario en un espacio privado, explica que no es una nota ni castigo, evita compartir
+            resultados públicamente y documenta solo lo necesario según las normas de protección de datos.
+          </p>
+        </article>
+      </section>
+
+      <section id="recursos" class="resources section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Rutas de ayuda</p>
+          <h2>Qué hacer si hay riesgo o malestar intenso</h2>
+        </div>
+        <div class="resource-cards">
+          <article class="resource-card urgent">
+            <h3>Riesgo inmediato</h3>
+            <p>
+              Si hay ideas, planes o intentos de hacerse daño, no dejes solo/a al estudiante. Contacta
+              emergencias locales, acude a urgencias o llama a una línea de crisis de tu país.
+            </p>
+          </article>
+          <article class="resource-card">
+            <h3>Colombia</h3>
+            <p>Línea 141 para niñas, niños y adolescentes; emergencias 123; orientación escolar o EPS.</p>
+          </article>
+          <article class="resource-card">
+            <h3>Estados Unidos</h3>
+            <p>Llama o envía texto al 988 para la Suicide & Crisis Lifeline. En peligro inmediato, 911.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell references">
+        <h2>Base técnica usada</h2>
+        <p>
+          El algoritmo usa dominios de síntomas y puntos de corte inspirados en tamizajes ampliamente usados:
+          PHQ-A/PHQ-9 para depresión, GAD-7 para ansiedad generalizada, SCARED para ansiedad infantil y
+          recomendaciones de evaluación escolar. No reproduce ni sustituye una batería psicológica completa.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Brújula Emocional Escolar · Tamizaje orientativo, confidencial y no diagnóstico.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
